@@ -1,0 +1,43 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"C:\\\\Users\\\\Luis Portugal\\\\Desenvolvimento\\\\bolfin\\\\components\\\\Amount.js\";\nimport React from \"react\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport Text from \"react-native-web/dist/exports/Text\";\nimport View from \"react-native-web/dist/exports/View\";\nexport default function Amount() {\n  return React.createElement(View, {\n    style: styles.amount,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 6,\n      columnNumber: 9\n    }\n  }, React.createElement(Text, {\n    style: styles.amountTitle,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 7,\n      columnNumber: 13\n    }\n  }, \"Saldo em conta\"), React.createElement(Text, {\n    style: styles.amountValue,\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 8,\n      columnNumber: 13\n    }\n  }, \"R$ 1.752,32\"));\n}\nvar styles = StyleSheet.create({\n  amount: {\n    flexDirection: \"column\",\n    justifyContent: \"center\",\n    alignItems: \"center\",\n    marginHorizontal: 15,\n    backgroundColor: \"#0d71ff\",\n    shadowColor: \"#000\",\n    shadowOffset: {\n      width: 0,\n      height: 10\n    },\n    shadowOpacity: 0.51,\n    shadowRadius: 13.16,\n    elevation: 20,\n    paddingHorizontal: 20,\n    paddingVertical: 10\n  },\n  amountTitle: {\n    color: \"white\"\n  },\n  amountValue: {\n    color: \"white\",\n    fontSize: 40,\n    marginVertical: 10\n  }\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "C:/Users/Luis Portugal/Desenvolvimento/bolfin/components/Amount.js"
+    ],
+    "names": [
+      "React",
+      "Amount",
+      "styles",
+      "amount",
+      "amountTitle",
+      "amountValue",
+      "StyleSheet",
+      "create",
+      "flexDirection",
+      "justifyContent",
+      "alignItems",
+      "marginHorizontal",
+      "backgroundColor",
+      "shadowColor",
+      "shadowOffset",
+      "width",
+      "height",
+      "shadowOpacity",
+      "shadowRadius",
+      "elevation",
+      "paddingHorizontal",
+      "paddingVertical",
+      "color",
+      "fontSize",
+      "marginVertical"
+    ],
+    "mappings": ";AAAA,OAAOA,KAAP,MAAkB,OAAlB;;;;AAGA,eAAe,SAASC,MAAT,GAAkB;AAC7B,SACI,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEC,MAAM,CAACC,MAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACI,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAED,MAAM,CAACE,WAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,sBADJ,EAEI,oBAAC,IAAD;AAAM,IAAA,KAAK,EAAEF,MAAM,CAACG,WAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAFJ,CADJ;AAMH;AAED,IAAMH,MAAM,GAAGI,UAAU,CAACC,MAAX,CAAkB;AAC7BJ,EAAAA,MAAM,EAAE;AACJK,IAAAA,aAAa,EAAE,QADX;AAEJC,IAAAA,cAAc,EAAE,QAFZ;AAGJC,IAAAA,UAAU,EAAE,QAHR;AAIJC,IAAAA,gBAAgB,EAAE,EAJd;AAKJC,IAAAA,eAAe,EAAE,SALb;AAMJC,IAAAA,WAAW,EAAE,MANT;AAOJC,IAAAA,YAAY,EAAE;AACVC,MAAAA,KAAK,EAAE,CADG;AAEVC,MAAAA,MAAM,EAAE;AAFE,KAPV;AAWJC,IAAAA,aAAa,EAAE,IAXX;AAYJC,IAAAA,YAAY,EAAE,KAZV;AAaJC,IAAAA,SAAS,EAAE,EAbP;AAcJC,IAAAA,iBAAiB,EAAE,EAdf;AAeJC,IAAAA,eAAe,EAAE;AAfb,GADqB;AAkB7BjB,EAAAA,WAAW,EAAE;AACTkB,IAAAA,KAAK,EAAE;AADE,GAlBgB;AAqB7BjB,EAAAA,WAAW,EAAE;AACTiB,IAAAA,KAAK,EAAE,OADE;AAETC,IAAAA,QAAQ,EAAE,EAFD;AAGTC,IAAAA,cAAc,EAAE;AAHP;AArBgB,CAAlB,CAAf",
+    "sourcesContent": [
+      "import React from \"react\";\r\nimport {StyleSheet, Text, View} from \"react-native\";\r\n\r\nexport default function Amount() {\r\n    return (\r\n        <View style={styles.amount}>\r\n            <Text style={styles.amountTitle}>Saldo em conta</Text>\r\n            <Text style={styles.amountValue}>R$ 1.752,32</Text>\r\n        </View>\r\n    );\r\n}\r\n\r\nconst styles = StyleSheet.create({\r\n    amount: {\r\n        flexDirection: \"column\",\r\n        justifyContent: \"center\",\r\n        alignItems: \"center\",\r\n        marginHorizontal: 15,\r\n        backgroundColor: \"#0d71ff\",\r\n        shadowColor: \"#000\",\r\n        shadowOffset: {\r\n            width: 0,\r\n            height: 10,\r\n        },\r\n        shadowOpacity: 0.51,\r\n        shadowRadius: 13.16,\r\n        elevation: 20,\r\n        paddingHorizontal: 20,\r\n        paddingVertical: 10,\r\n    },\r\n    amountTitle: {\r\n        color: \"white\",\r\n    },\r\n    amountValue: {\r\n        color: \"white\",\r\n        fontSize: 40,\r\n        marginVertical: 10\r\n    }\r\n});\r\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

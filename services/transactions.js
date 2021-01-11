@@ -3,8 +3,8 @@ import Store from "../store";
 export default {
     allTransaction()
     {
-        let {transactions} = Store.getState();
-        return transactions;
+        let {transactions, collection} = Store.getState();
+        return transactions.filter(transaction => transaction.collection === collection);
     },
     addTransaction(transaction)
     {

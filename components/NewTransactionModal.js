@@ -1,33 +1,48 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import {Dimensions, StatusBar, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View} from "react-native";
 import Modal from 'react-native-modal';
 import {Ionicons} from "@expo/vector-icons";
 import CheckBox from '@react-native-community/checkbox';
 
 import TransactionService from "../services/transactions";
+import CollectionsService from "../services/collections";
+import Store from "../store";
 
-export default function NewModal()
+export default function NewTransactionModal()
 {
-    let [visible, setVisible] = useState(false);
+    let [modalVisible, setModalVisible] = useState(false);
+    let [collection, setCollection] = useState(null);
     let [name, setName] = React.useState('');
     let [value, setValue] = useState('');
     let [type, setType] = useState(false);
     let [lock, setLock] = useState(false);
 
+    useEffect(() =>
+    {
+        setCollection(CollectionsService.activeCollection());
+        return Store.subscribe(() => setCollection(CollectionsService.activeCollection()));
+    }, []);
+
     const saveTransaction = useCallback(() =>
     {
+        if (!name || !value)
+        {
+            return;
+        }
+
         TransactionService.addTransaction({
             id: Date.now().toString(),
             date: Date.now(),
             type: type
                 ? "+"
                 : "-",
+            collection,
             name,
             lock,
             value
         });
 
-        setVisible(false);
+        setModalVisible(false);
         setName('');
         setValue('');
         setType(false);
@@ -36,14 +51,18 @@ export default function NewModal()
 
     return (
         <>
-            <TouchableOpacity onPress={() => setVisible(true)}>
-                <Ionicons name={"add"} size={24} color={"#0060ff"}/>
+            <TouchableOpacity
+                disabled={!collection}
+                onPress={() => setModalVisible(true)}>
+                <Ionicons name={"add"} size={24} color={collection
+                    ? "#0060ff"
+                    : "#767577"}/>
             </TouchableOpacity>
             <Modal
-                isVisible={visible}
+                isVisible={modalVisible}
                 style={styles.modal}
-                onBackButtonPress={() => setVisible(false)}
-                onBackdropPress={() => setVisible(false)}>
+                onBackButtonPress={() => setModalVisible(false)}
+                onBackdropPress={() => setModalVisible(false)}>
                 <View style={styles.container}>
                     <View style={styles.dialog}>
                         <TextInput
@@ -71,7 +90,7 @@ export default function NewModal()
                             <View style={styles.lock}>
                                 <Ionicons name={type
                                     ? "md-add"
-                                    : "md-remove-outline"} size={16}/>
+                                    : "md-remove-outline"} size={24}/>
                                 <Switch
 
                                     trackColor={{false: '#b15353', true: '#81b0ff'}}
@@ -83,7 +102,7 @@ export default function NewModal()
                                     value={type}/>
                             </View>
                             <View style={styles.lock}>
-                                <Ionicons name="md-lock-closed-outline" size={16}/>
+                                <Ionicons name="md-lock-closed-outline" size={24}/>
                                 <CheckBox
                                     tintColor={"#767577"}
                                     onCheckColor={"#0060ff"}

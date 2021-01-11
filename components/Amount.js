@@ -5,6 +5,7 @@ import Intl from "intl";
 import "intl/locale-data/jsonp/pt-BR";
 
 import Store from '../store';
+import TransactionService from "../services/transactions"
 
 export default function Amount()
 {
@@ -12,7 +13,7 @@ export default function Amount()
 
     const sumTotalAmount = useCallback(() =>
     {
-        let {transactions} = Store.getState();
+        let transactions = TransactionService.allTransaction();
         let sum = Array.from(transactions)
             .reduce((amount, item) => item.type === '+'
                 ? amount + parseFloat(item.value)
@@ -30,7 +31,7 @@ export default function Amount()
 
     return (
         <View style={styles.amount}>
-            <Text style={styles.amountTitle}>Saldo em conta</Text>
+            <Text style={styles.amountTitle}>Saldo</Text>
             <Text style={styles.amountValue}>R$ {totalAmount}</Text>
         </View>
     );

@@ -3,7 +3,7 @@ import {FlatList, StyleSheet} from 'react-native'
 
 import Transaction from "./Transaction"
 import Store from "../store"
-import TransactioonService from "../services/transactions"
+import TransactionService from "../services/transactions"
 
 export default function Transactions()
 {
@@ -11,8 +11,8 @@ export default function Transactions()
 
     useEffect(() =>
     {
-        setTransactions(TransactioonService.allTransaction());
-        return Store.subscribe(() => setTransactions(TransactioonService.allTransaction()));
+        setTransactions(TransactionService.allTransaction());
+        return Store.subscribe(() => setTransactions(TransactionService.allTransaction()));
     }, []);
 
     return (
