@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 40,
-        fontFamily: "Assistant-Light",
         fontSize: 24,
         color: "#000"
     },
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     buttonSaveText: {
-        fontFamily: "Assistant-Bold",
+
         color: "#ffffff",
         fontSize: 16
     }

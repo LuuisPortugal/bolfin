@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     },
     name: {
         color: '#000',
-        fontFamily: "Assistant-Light",
         fontSize: 25
     }
 });

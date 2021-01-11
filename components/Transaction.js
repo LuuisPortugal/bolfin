@@ -75,16 +75,16 @@ const styles = StyleSheet.create({
     },
     date: {
         color: '#a9a9a9',
-        fontFamily: "Assistant-Light"
+
     },
     infoLabel: {
         fontSize: 16,
-        fontFamily: "Assistant-Bold"
+
     },
     infoValue: {
         color: "#000",
         fontSize: 16,
-        fontFamily: "Assistant"
+
     },
     deletedView: {
         flex: 1,

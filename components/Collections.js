@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     collectionsLabel: {
         fontSize: 18,
         color: '#000',
-        fontFamily: "Assistant-Bold"
+
     },
     actions: {
         flexDirection: "row",

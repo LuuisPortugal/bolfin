@@ -40,11 +40,11 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 24,
         color: '#000',
-        fontFamily: "Assistant-Bold"
+
     },
     nick: {
         fontSize: 12,
         color: '#a9a9a9',
-        fontFamily: "Assistant-Light"
+
     }
 });

@@ -139,13 +139,12 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 24,
-        fontFamily: "Assistant-Light"
+
     },
     input: {
         height: 40
     },
     inputName: {
-        fontFamily: "Assistant-Light",
         fontSize: 24,
         color: "#000"
     },
@@ -161,13 +160,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     cifao: {
-        fontFamily: "Assistant-Light",
         color: "#000",
         fontSize: 24,
         paddingRight: 5,
     },
     inputValue: {
-        fontFamily: "Assistant-Light",
         fontSize: 24,
         color: "#000"
     },
@@ -185,7 +182,6 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     buttonSaveText: {
-        fontFamily: "Assistant-Bold",
         color: "#ffffff",
         fontSize: 16
     }

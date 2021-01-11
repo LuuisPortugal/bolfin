@@ -42,12 +42,10 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     header: {
-        fontFamily: "Assistant-Light",
         fontSize: 24,
         color: "#000"
     },
     subHeader: {
-        fontFamily: "Assistant-Light",
         fontSize: 12,
         color: "#a9a9a9"
     }

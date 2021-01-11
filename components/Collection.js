@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     name: {
         flex: 1,
         color: '#000',
-        fontFamily: "Assistant-Light",
         fontSize: 25
     }
 });
